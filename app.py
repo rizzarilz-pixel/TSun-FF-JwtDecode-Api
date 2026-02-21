@@ -24,7 +24,7 @@ def decode_jwt(token):
     except jwt.InvalidTokenError:
         return "Invalid token"
 
-@app.route('/decode_jwt', methods=['GET'])
+@app.route('/decode', methods=['GET'])
 def api_decode_jwt():
     token = request.args.get('token')
     
